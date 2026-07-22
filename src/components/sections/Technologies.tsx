@@ -28,17 +28,21 @@ export const Technologies: React.FC = () => {
         </motion.div>
 
         <div className="flex flex-col lg:flex-row items-center gap-12 max-w-6xl mx-auto">
-          <div className="w-full lg:w-1/2">
+          <div className="w-full lg:w-1/2 flex items-center justify-center">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1 }}
-              className="relative pointer-events-none opacity-90"
+              className="relative pointer-events-none opacity-90 w-full"
             >
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-primary/5 blur-[100px] rounded-full z-[-1]" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-[300px] bg-primary/10 blur-[100px] rounded-full z-[-1]" />
               <ErrorBoundary fallback={null}>
-              <ViewportLottie animationData={codingAnimation} loop={true} />
+                <ViewportLottie 
+                  animationData={codingAnimation} 
+                  loop={true} 
+                  className="w-full transform scale-125 sm:scale-150 lg:scale-[1.6] origin-center" 
+                />
               </ErrorBoundary>
             </motion.div>
           </div>
