@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import codingAnimation from '../../assets/Coding Slide.json';
+import codingAnimation from '../../assets/Coding.json';
 import { ErrorBoundary } from '../ui/ErrorBoundary';
 import { ViewportLottie } from '../ui/ViewportLottie';
 
@@ -34,14 +34,14 @@ export const Technologies: React.FC = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1 }}
-              className="relative pointer-events-none opacity-90 w-full"
+              className="relative pointer-events-none opacity-90 w-full max-w-lg mx-auto"
             >
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-[300px] bg-primary/10 blur-[100px] rounded-full z-[-1]" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-[350px] bg-primary/10 blur-[100px] rounded-full z-[-1]" />
               <ErrorBoundary fallback={null}>
                 <ViewportLottie 
                   animationData={codingAnimation} 
                   loop={true} 
-                  className="w-full transform scale-125 sm:scale-150 lg:scale-[1.6] origin-center" 
+                  className="w-full h-auto drop-shadow-xl" 
                 />
               </ErrorBoundary>
             </motion.div>

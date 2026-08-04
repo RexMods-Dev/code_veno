@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Canvas } from '@react-three/fiber';
-import { Stars, Float, OrbitControls } from '@react-three/drei';
+import { Stars, Float, OrbitControls, PerformanceMonitor } from '@react-three/drei';
 import { useInView } from 'react-intersection-observer';
 import heroAnimation from '../../assets/man_working_on_laptop.json';
 import { ErrorBoundary } from '../ui/ErrorBoundary';
@@ -40,6 +40,7 @@ const FloatingShapes = () => {
 };
 
 export const Hero: React.FC = () => {
+  const [dpr, setDpr] = useState(1.5);
   // Pause WebGL render loop when Hero scrolls out of view
   const { ref: sectionRef, inView: heroInView } = useInView({
     threshold: 0.05,
@@ -54,7 +55,9 @@ export const Hero: React.FC = () => {
           <Canvas
             camera={{ position: [0, 0, 10], fov: 50 }}
             frameloop={heroInView ? 'always' : 'never'}
+            dpr={dpr}
           >
+            <PerformanceMonitor onIncline={() => setDpr(2)} onDecline={() => setDpr(1)} />
             <FloatingShapes />
             <OrbitControls enableZoom={false} enablePan={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />
           </Canvas>
