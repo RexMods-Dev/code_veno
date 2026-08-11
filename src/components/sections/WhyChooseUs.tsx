@@ -32,7 +32,7 @@ const item: Variants = {
 
 export const WhyChooseUs: React.FC = () => {
   return (
-    <section className="py-32 relative z-10 overflow-hidden">
+    <section className="py-20 md:py-32 relative z-10 overflow-hidden">
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex flex-col lg:flex-row gap-16 items-start">
           <motion.div 
@@ -45,7 +45,7 @@ export const WhyChooseUs: React.FC = () => {
             <span className="text-xs uppercase tracking-widest text-primary/60 font-mono mb-4 block">
               Why Partner With Us
             </span>
-            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 leading-tight">Why Choose Us.</h2>
+            <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6 leading-tight">Why Choose Us.</h2>
             <p className="text-secondary text-lg mb-8 leading-relaxed">
               We don't just write code; we solve business problems. Our approach combines technical excellence with strategic thinking to deliver products that give you a competitive edge.
             </p>

@@ -70,7 +70,7 @@ export const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-5xl md:text-7xl font-heading font-bold leading-tight"
+            className="text-3xl md:text-5xl lg:text-6xl lg:text-7xl font-heading font-bold leading-tight"
           >
             We Engineer <br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-400 to-gray-600">
@@ -83,7 +83,7 @@ export const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="mt-6 text-lg md:text-xl text-secondary max-w-xl font-sans"
+            className="mt-6 text-base md:text-xl text-secondary max-w-xl font-sans"
           >
             We build scalable software, AI solutions, web applications, mobile apps, and business platforms for companies worldwide.
           </motion.p>
@@ -92,13 +92,13 @@ export const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="mt-10 flex flex-wrap gap-4"
+            className="mt-10 flex flex-col sm:flex-row gap-4"
           >
-            <a href="#projects" className="px-8 py-4 rounded-full bg-primary text-background font-medium hover:bg-gray-200 transition-colors text-lg flex items-center gap-2 group">
+            <a href="#projects" className="px-8 py-4 rounded-full bg-primary text-background font-medium hover:bg-gray-200 transition-colors text-base md:text-lg flex justify-center items-center gap-2 group">
               View Projects
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </a>
-            <a href="#contact" className="px-8 py-4 rounded-full glass border border-border-glass text-primary font-medium hover:bg-white/5 transition-colors text-lg">
+            <a href="#contact" className="px-8 py-4 rounded-full glass border border-border-glass text-primary font-medium hover:bg-white/5 transition-colors text-base md:text-lg flex justify-center items-center">
               Start a Project
             </a>
           </motion.div>

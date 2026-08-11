@@ -37,7 +37,7 @@ const services = [
 
 export const Services: React.FC = () => {
   return (
-    <section id="services" className="py-32 relative z-10">
+    <section id="services" className="py-20 md:py-32 relative z-10">
       <div className="container mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -46,7 +46,7 @@ export const Services: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="mb-20 text-center"
         >
-          <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">Our Services.</h2>
+          <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6">Our Services.</h2>
           <p className="text-secondary max-w-2xl mx-auto text-lg">
             We provide end-to-end software development services, from initial concept to deployment and beyond.
           </p>

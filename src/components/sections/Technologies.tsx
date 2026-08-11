@@ -12,7 +12,7 @@ const techs = [
 
 export const Technologies: React.FC = () => {
   return (
-    <section className="py-32 relative z-10 overflow-hidden">
+    <section className="py-20 md:py-32 relative z-10 overflow-hidden">
       <div className="container mx-auto px-6 md:px-12 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -21,7 +21,7 @@ export const Technologies: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">Technologies We Use.</h2>
+          <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6">Technologies We Use.</h2>
           <p className="text-secondary max-w-2xl mx-auto text-lg">
             We build with the best modern technologies to ensure scalable, secure, and high-performance applications.
           </p>

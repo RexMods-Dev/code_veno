@@ -47,7 +47,7 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-32 relative z-10 overflow-hidden">
+    <section id="contact" className="py-20 md:py-32 relative z-10 overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[800px] bg-primary/5 blur-[120px] rounded-full z-[-1] pointer-events-none" />
       
       <div className="container mx-auto px-6 md:px-12">
@@ -58,7 +58,7 @@ export const Contact: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="mb-20 text-center"
         >
-          <h2 className="text-4xl md:text-6xl font-heading font-bold mb-6">Let's Build Something Extraordinary.</h2>
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">Let's Build Something Extraordinary.</h2>
           <p className="text-secondary max-w-2xl mx-auto text-lg">
             Ready to transform your ideas into reality? Fill out the form below, and we'll get back to you within 24 hours.
           </p>

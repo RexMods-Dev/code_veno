@@ -15,7 +15,7 @@ const processSteps = [
 
 export const Process: React.FC = () => {
   return (
-    <section id="process" className="py-32 relative z-10">
+    <section id="process" className="py-20 md:py-32 relative z-10">
       <div className="container mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -24,7 +24,7 @@ export const Process: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="mb-20 text-center"
         >
-          <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">Our Process.</h2>
+          <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6">Our Process.</h2>
           <p className="text-secondary max-w-2xl mx-auto text-lg">
             A systematic approach to delivering high-quality software on time and within budget.
           </p>

@@ -29,7 +29,7 @@ export const Statistics: React.FC = () => {
               transition={{ duration: 0.5, delay: idx * 0.1 }}
               className="text-center flex flex-col items-center"
             >
-              <div className="text-4xl md:text-6xl font-heading font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500 mb-2">
+              <div className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500 mb-2">
                 {inView ? <CountUp end={stat.value} duration={2.5} /> : '0'}
                 {stat.suffix}
               </div>

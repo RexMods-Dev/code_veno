@@ -2,28 +2,28 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 import abinImage from '../../assets/abin_new.png';
+import prajithImage from '../../assets/Prajith.png';
 
 const founders = [
   {
     name: 'Abin R Philip',
     role: 'Founder & Developer',
-    grad: 'BCA Graduate, University of Kerala',
-    cert: 'IGNET Certified Python Full Stack Developer',
-    skills: ['Backend Development', 'AI Integration', 'Django', 'Python', 'React'],
+    description: "Hi, I am Abin, a backend development and AI integration specialist. I hold a BCA from the University of Kerala and an IGNET Certification as a Python Full Stack Developer, and I am currently pursuing my Master’s in Computer Applications while working at Zecser Business LLP. I am deeply passionate about engineering scalable, high-performance web solutions that resolve complex technical challenges. By leveraging my core expertise in Python, Django, and React, I focus on building robust, modern digital architectures that are perfectly tailored to scale alongside a business's unique needs.",
+    expertise: 'Backend Development | AI Integration | Django | Python | React',
     image: abinImage,
   },
   {
     name: 'Prajith S Pradeep',
     role: 'Co-Founder & Developer',
-    grad: 'BCA Graduate, University of Kerala',
-    cert: 'IGNET Certified Python Full Stack Developer',
-    skills: ['Frontend', 'Backend', 'Full Stack', 'React', 'Python'],
+    description: "Hello, I am Prajith, a versatile full-stack engineer dedicated to designing complete, end-to-end digital experiences. I hold a BCA from the University of Kerala and an IGNET Certification as a Python Full Stack Developer, complemented by specialized training in Applied Data Science. My technical background is diverse, ranging from past experience as a data annotator to currently freelancing as a .NET Developer building custom C# tools for the Grand Theft Auto V community. Whether crafting dynamic React interfaces or engineering comprehensive back-end systems, I prioritize delivering highly efficient, maintainable code.",
+    expertise: 'Frontend | Backend | Full Stack | React | Python | .NET',
+    image: prajithImage,
   }
 ];
 
 export const About: React.FC = () => {
   return (
-    <section id="about" className="py-32 relative z-10">
+    <section id="about" className="py-20 md:py-32 relative z-10 overflow-hidden">
       <div className="container mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -32,7 +32,7 @@ export const About: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="mb-20 text-center"
         >
-          <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">The Minds Behind Code Veno.</h2>
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">The Minds Behind Code Veno.</h2>
           <p className="text-secondary max-w-2xl mx-auto text-lg">
             We are passionate software developers who build modern digital products for startups, businesses, and enterprises worldwide.
           </p>
@@ -61,7 +61,7 @@ export const About: React.FC = () => {
                     <p className="text-secondary text-lg mb-8 font-medium tracking-wide">| {founder.role} |</p>
                     
                     <p className="text-secondary/80 leading-relaxed text-lg max-w-2xl">
-                      Hi, I am {founder.name.split(' ')[0]}. I am a passionate developer holding a {founder.grad}. I am also an {founder.cert}. With extensive experience in modern web technologies, I focus on crafting scalable, high-performance solutions tailored to unique business needs.
+                      {founder.description}
                     </p>
                   </div>
 
@@ -80,10 +80,7 @@ export const About: React.FC = () => {
                 <div className="flex flex-col items-center">
                   <h4 className="text-2xl md:text-3xl font-heading font-bold mb-6 text-center text-primary">Areas of Expertise</h4>
                   <p className="text-secondary font-medium text-center text-lg md:text-xl mb-6 tracking-wide">
-                    {founder.skills.join(' | ')}
-                  </p>
-                  <p className="text-secondary/80 leading-relaxed text-center max-w-4xl mx-auto">
-                    {founder.name.split(' ')[0]} specializes in {founder.skills.slice(0, 2).join(' and ')}, helping clients navigate technical challenges and scale their platforms. Leveraging expertise in {founder.skills.slice(2).join(', ')}, {founder.name.split(' ')[0]} tailors approaches to ensure robust, maintainable, and modern digital architectures for every project.
+                    {founder.expertise}
                   </p>
                 </div>
               </div>

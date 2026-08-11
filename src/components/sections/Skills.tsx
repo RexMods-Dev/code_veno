@@ -33,7 +33,7 @@ const skillCategories = [
 
 export const Skills: React.FC = () => {
   return (
-    <section id="skills" className="py-32 relative z-10 border-t border-border-glass">
+    <section id="skills" className="py-20 md:py-32 relative z-10 border-t border-border-glass">
       <div className="container mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -42,7 +42,7 @@ export const Skills: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="mb-20 text-center"
         >
-          <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">Our Expertise.</h2>
+          <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6">Our Expertise.</h2>
           <p className="text-secondary max-w-2xl mx-auto text-lg">
             A comprehensive skill set that enables us to build scalable, full-stack applications from the ground up.
           </p>
