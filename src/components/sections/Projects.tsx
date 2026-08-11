@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, ExternalLink, Globe } from 'lucide-react';
+import { ExternalLink, Globe } from 'lucide-react';
 
 const projects = [
   {
@@ -41,7 +41,14 @@ const projects = [
   }
 ];
 
-const liveExamples = [
+type LiveExample = {
+  title: string;
+  url: string;
+  active: boolean;
+  note?: string;
+};
+
+const liveExamples: LiveExample[] = [
   {
     title: 'Real Estate Website',
     url: 'https://rexmods-dev.github.io/auren-dev/',
@@ -127,7 +134,7 @@ export const Projects: React.FC = () => {
           </div>
 
           <div className="flex flex-col gap-3">
-            {liveExamples.map((example, idx) => (
+            {liveExamples.map((example) => (
               <div 
                 key={example.title}
                 className={`py-4 px-6 md:px-8 rounded-2xl border border-white/5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 transition-all duration-300 ${example.active ? 'bg-surface/50 hover:bg-surface hover:border-white/20' : 'bg-surface/20 opacity-70'}`}
